@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dmode colors -->
+    <color name="_colorBackgroundPrimary">#212121</color>
+    <color name="_colorBackgroundSecondary">#424242</color>
+
+    <color name="_textColorPrimary">#F5F5F5</color>
+    <color name="_textColorSecondary">#DDDDDD</color>
+</resources>

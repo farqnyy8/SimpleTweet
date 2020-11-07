@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SimpleTweet</string>
+    <string name="login_label">Log in</string>
+    <string name="intent_scheme">oauth</string>
+    <string name="intent_host">cprest</string>
+
+    <!-- item tweet string -->
+    <string name="sample_screen_name">rand_usr_name</string>
+    <string name="sample_tweet">This is a Sample Tweet</string>
+    <string name="sample_timestamp">23s</string>
+
+</resources>

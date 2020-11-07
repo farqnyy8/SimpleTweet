@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/margin_default_double"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/detailsProfileImage"
+        android:layout_width="@dimen/profile_img_width"
+        android:layout_height="@dimen/profile_img_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_none"
+        android:layout_marginTop="@dimen/margin_none"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/detailsScreenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/width_default_half"
+        android:layout_marginStart="@dimen/margin_default_half"
+        android:layout_toEndOf="@+id/detailsProfileImage"
+        android:text="@string/sample_screen_name" />
+
+    <TextView
+        android:id="@+id/detailsTweetBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailsScreenName"
+        android:layout_marginStart="@dimen/margin_default_half"
+        android:layout_marginTop="@dimen/margin_default_quarter"
+        android:layout_toEndOf="@+id/detailsProfileImage"
+        android:textSize="@dimen/text_normal"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:text="@string/sample_tweet" />
+
+    <TextView
+        android:id="@+id/detailsTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/sample_timestamp" />
+</RelativeLayout>
