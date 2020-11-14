@@ -10,5 +10,10 @@
     <string name="sample_screen_name">rand_usr_name</string>
     <string name="sample_tweet">This is a Sample Tweet</string>
     <string name="sample_timestamp">23s</string>
+    <string name="compose_tweet_hint">What\'s happening?</string>
+    <string name="tweet">Tweet</string>
+    <string name="tweet_too_short">Sorry, your tweet cannot be empty</string>
+    <string name="tweet_too_long">Sorry, your tweet is too long</string>
+    <string name="tweet_success">Yayy, you\'ve shared your tweet</string>
 
 </resources>

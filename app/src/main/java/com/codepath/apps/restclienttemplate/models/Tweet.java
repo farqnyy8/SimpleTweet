@@ -1,4 +1,10 @@
-package com.codepath.apps.restclienttemplate.ui.tweet;
+package com.codepath.apps.restclienttemplate.models;
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import com.codepath.apps.restclienttemplate.utils.TimeFormatter;
 
@@ -11,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Parcel
+@Entity(foreignKeys = @ForeignKey(entity = User.class, parentColumns = "id", childColumns = "userId"))
 public class Tweet {
 
     private static String TEXT = "text";
@@ -20,10 +27,21 @@ public class Tweet {
 
     public static final String TWEET_AS_STRING = "tweet";
 
-    public String body;
-    public String createdAt;
-    public User user;
+    @PrimaryKey
+    @ColumnInfo
     public long id;
+
+    @ColumnInfo
+    public String body;
+
+    @ColumnInfo
+    public String createdAt;
+
+    @ColumnInfo
+    public long userId;
+
+    @Ignore
+    public User user;
 
     public Tweet() {}
 
@@ -31,7 +49,9 @@ public class Tweet {
         Tweet tweet = new Tweet();
         tweet.body = jsonObject.getString(TEXT);
         tweet.createdAt = jsonObject.getString(CREATED_AT);
-        tweet.user = User.fromJson(jsonObject.getJSONObject(USER));
+        User user = User.fromJson(jsonObject.getJSONObject(USER));
+        tweet.user = user;
+        tweet.userId = user.id;
         tweet.id = jsonObject.getLong(ID);
         return tweet;
     }
